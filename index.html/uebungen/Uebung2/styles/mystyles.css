@@ -1,131 +1,121 @@
-
-<div class="header">
-<img src="./bilder/icon.png" class="logo">
-
-<h1>Willkommen in WebTech!</h1>
-
-<div class="icons">
-<a href="plan.html"><img src="./bilder/plan.png"></a>
-<a href="#"><img src="./bilder/essen.png"></a>
-</div>
-</div>
-</header>
+:root {
+  --htw-grau: #AFAFAF;
+  --htw-blau: #0082D1;
+  --htw-gruen:  #76B900;
+}
 
 body {
-font-family: Verdana, sans-serif;
-margin: 0;
-display: flex;
-flex-direction: column;
-min-height: 100vh;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* HEADER */
 header {
-background-color: #ccbfbf; /* HTW Grau */
+  background-color: var(--htw-grau);
+  color: white;
+  /*
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  */
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    width: 2em;
+    padding: 1%;
+  }
+
+  span {
+    /*text-align: right;*/
+    padding: 1%;
+  }
 }
 
-.header {
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 10px;
-}
-
-.logo {
-height: 40px;
-}
-
-/* Titel */
 h1 {
-color: #005CA9; /* HTW Blau */
+  color: var(--htw-blau);
 }
 
-/* Icons rechts */
-.icons img {
-height: 30px;
-margin-left: 10px;
+h3 {
+  margin-left: 4%;
 }
 
-/* Zweite Überschrift */
-h2 {
-margin-left: 20px;
-}
-
-/* LISTE */
 ul {
-list-style: none;
-margin: 20px;
-padding: 0;
+  list-style: none;
 }
 
-li {
-border: 2px solid #ccc;
-margin-bottom: 10px;
-padding: 10px;
-transition: 0.3s;
+ul>li {
+  border: 2px solid black;
+  border-radius: 1rem;
+  margin: 1%;
+  padding: 1%;
+  width: 30%;
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  a:hover {
+    font-weight: bold;
+  }
 }
 
-/* Links */
-a {
-text-decoration: none;
-color: black;
+ul>li:hover {
+    background-color: rgb(201, 201, 219);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    a {
+      color: var(--htw-blau);
+    }
 }
 
-/* HOVER (sehr wichtig!) */
-li:hover {
-background-color: #e6ffe6;
-border-color: green;
+#indexmain {
+  background-color: rgb(226, 240, 226);
+  display: grid;
+  grid-template-columns: 4fr 1fr;
 }
 
-li:hover a {
-color: green;
-}
+#indexmain>aside {
+  background-color: rgb(196, 226, 196);
+  text-align: center;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 
-/* FOOTER (sticky!) */
+  a {
+    margin: auto;
+  }
+
+  img {
+    width: 50%;
+  }
+}
 footer {
-background-color: #fca31d; /* HTW Orange */
+background-color: #f39200; 
 text-align: center;
 padding: 10px;
+
 margin-top: auto;
-}
+
 table {
-border-collapse: collapse;
-width: 80%;
-margin: 20px;
-}
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+     border-collapse: collapse;
+     width: 60%;
 
-th, td {
-border: 1px solid #ccc;
-padding: 10px;
-}
+     thead tr {
+      background-color: var(--htw-gruen);
+     }
 
-/* Hover Effekt */
-tr:hover {
-background-color: #f0f0f0;
-}
+     tbody tr:nth-child(even) {
+      background-color: rgb(230, 225, 225);
+     } 
 
+     tbody tr:nth-child(odd) {
+      background-color: rgb(247, 215, 215);
+     }
 
-/* Listenelement */
-li {
-border: 2px solid #ccc;
-padding: 10px;
-margin-bottom: 10px;
-transition: 0.3s;
-}
+     tbody tr:hover {
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+     }
 
-/* Links im Listenelement */
-li a {
-color: black;
-text-decoration: none;
-}
-
-/* HOVER EFFEKT */
-li:hover {
-background-color: #76e076; /* hellgrün */
-border-color: #008000; /* HTW Grün */
-}
-
-/* Text wird auch grün */
-li:hover a {
-color: #008000;
+     td,th {
+      padding: 2%;
+     }
 }
